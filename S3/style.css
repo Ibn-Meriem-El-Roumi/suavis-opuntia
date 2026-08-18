@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+a{
+    color: #00a1f2;
+    cursor: progress;
+}
+
+ul{
+    margin: 0 3rem;
+}
+:root{
+    font-size: 20px;
+}
+
+body {
+    background-color: rgba(45, 148, 92, 0.846);
+    /* background-color: #d3c4afff; */
+    color: white; 
+    font-family: "Spline Sans Mono", monospace;
+}
+
+#first-h{
+    text-align: center;
+    background-color: pink;
+    margin: 1rem 2rem 3rem 4rem;
+    padding: 0.5rem 1rem 1.5rem 2rem;
+    border: .25rem dashed black;
+    /* w-spacing: 1rem */
+    word-spacing: 1rem;
+}
+
+@media screen and (width <= 400px ){
+    body{
+        background-color: pink;
+        color: black;
+    }
+}
