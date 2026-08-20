@@ -1,0 +1,119 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+}
+
+.grid-wrapper{
+    width: 60%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 1rem;
+
+    /* transform: rotate(-45deg); */
+
+    header{
+        border-radius: 0.5rem;
+        padding: 1rem;
+        color: white;
+        grid-column: 2;
+        grid-row: 1;
+        background-color: #6f6f6f;
+        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        &:hover{
+            transform: scale(1.09);
+        }
+    }
+
+    aside{
+        border-radius: 0.5rem;
+        padding: 1rem;
+        color: white;
+        grid-column: 1;
+        grid-row: 2;
+        background-color: #3c3c3c;
+        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        &:hover{
+            transform: rotate(45deg);
+        }
+    }
+
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        color: white;
+        grid-column: 2;
+        grid: 2;
+        background-color: #402c2c;
+
+    }
+
+    footer{
+        border-radius: 0.5rem;
+        padding: 1rem;
+        color: white;
+        grid-column: 1/3;
+        grid: 3;
+        background-color: #6f6f6f;
+
+    }
+}
+
+.grid-parent{
+    display: grid;
+    
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+#navigation{
+    grid-column: 1 / 7;
+    grid-row: 1;
+}
+
+#sidebar{
+    grid-column: 1;
+    grid-row: 2/4;
+}
+
+#content-1{
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+
+#content-2{
+    grid-column: 4/6;
+    grid-row: 2;
+}
+#footer{
+    grid-column: 1/7;
+    grid-row: 4;
+}
+
+#ad{
+    background-color: green;
+    grid-column: 6;
+    grid-row: 2/4;
+}
+
+.child{
+    min-width: 5rem;
+    min-height: 10rem;
+}
