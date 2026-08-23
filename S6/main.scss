@@ -1,0 +1,52 @@
+@use "layout";
+
+*{
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+
+    @include layout.generateFlex(column, center, start);
+
+}
+
+#card-deck{
+    @include layout.generateFlex(column, start, start);
+    padding: 1rem;
+    .card{
+        @include layout.generateFlex(column, start, start);
+        padding: 1rem;
+        background-color: #545aff;
+        color: #ffeeff
+    };
+}
+
+@media screen and (width <= 650px){
+    body{
+        background-color: #545aff;
+    }
+    #card-deck{
+        width: 80%;
+        .card{
+            background-color: gray;
+        }
+    }
+}
+@media screen and (width >= 800px){
+    #card-deck{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (width >= 980px){
+    #card-deck{
+        width: 60%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
