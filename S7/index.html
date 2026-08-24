@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations in CSS</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- <main>
+        <div class="card"></div>
+    </main> -->
+
+    <h1>
+        <span>H</span>
+        <span>e</span>
+        <span>l</span>
+        <span>l</span>
+        <span>o</span>
+        <span></span>
+        <span>W</span>
+        <span>o</span>
+        <span>r</span>
+        <span>l</span>
+        <span>d</span>
+        <span>!</span>
+    </h1>
+
+    <script>
+        const spans = document.querySelectorAll("span")
+        spans.forEach((span, index) => {
+            span.addEventListener("mouseover", (e) => {
+                span.style.color = `hsl(${index*10}, 50%, 50%)`
+                span.className = "wobble"
+                console.log(span.textContent)
+            })
+            
+            span.addEventListener("mouseout", (e) => {
+                setTimeout(() => {
+                    span.style.color = `hsl(${index*0}, 0%, 0%)`
+                    span.className = ""
+                }, 1000)
+            })
+            
+        })
+    </script>
+</body>
+</html>
