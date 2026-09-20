@@ -1,7 +1,7 @@
 const commentsContainer = document.querySelector("#comments")
 
 async function getPosts(){
-    const res = await fetch("https://jsonplaceholder.typicode.com/comments", {
+    const res = await fetch("http://localhost:8000/login", {
         method: "POST"
     })
     const data = await res.json()
