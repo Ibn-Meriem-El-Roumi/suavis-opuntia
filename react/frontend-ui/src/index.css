@@ -1,0 +1,18 @@
+#navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+#gallery{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    div{
+        padding: 1rem;
+        background-color: rgb(58, 57, 57);
+        color: white;
+    }
+}
